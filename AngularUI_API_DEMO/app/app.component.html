@@ -1,0 +1,37 @@
+<h1>Spring Cloud Config</h1>
+<form role="form" name="onlineForm" method="post" action="authenticate" class="container card bg-light login-form">
+    <div class="form-group">
+        <label for="model_domain">Domain:</label>
+      <input type="text" required="true" class="form-control" [(ngModel)]="credential.domain" name="model_domain" id="model_domain" [placeholder]="'Enter Domain'">
+    </div>
+    
+    <div class="form-group">
+        <label for="model_subdomain">Sub-Domain:</label>
+    <input type="text" required="true" class="form-control" [(ngModel)]="credential.subdomain" name="model_subdomain" id="model_subdomain"
+      [placeholder]="'Enter Subdomain'">
+    </div>
+
+    <div class="form-group">
+        <label for="model_key">Key:</label>
+    <input type="text" required="true" class="form-control" [(ngModel)]="credential.key" name="model_key" id="model_key" [placeholder]="'Enter Key'">
+    </div>
+    <div class="form-group">
+        <label for="model_label">Label:</label>
+    <input type="text" required="true" class="form-control" [(ngModel)]="credential.label" name="model_label" id="model_label" [placeholder]="'Enter Label'">
+  </div>
+  <div class="form-group">
+      <label for="model_url">URL:</label>
+    <input type="text" required="true" class="form-control" [(ngModel)]="credential.url" name="model_url" id="model_url" [placeholder]="'Enter Spring Cloud Server URL'">
+  </div>
+    <div class="btn-group">
+      <button id="btnLogin" (click)="onSubmit()" ol-main large="true" label="btnLogin" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+</form>
+<div *ngIf="setText" class="container success-message alert alert-success">
+    <span >{{setText}}</span>
+  </div>
+
+<div *ngIf="error" class="container success-message alert alert-danger">
+      <span >{{error}}</span>
+</div>

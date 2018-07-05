@@ -1,0 +1,10 @@
+help_enabled=true
+help_root_url=/webhelp
+help_use_locale=true
+help_use_affiliate=false
+help_use_channel=false
+help_use_application=true
+help_server_protocol=https
+help_server_host=localhost
+help_server_port=9012
+web_server_protocol=https
